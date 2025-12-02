@@ -23,6 +23,9 @@ def home():
         </p>
     </div>
     ''', 200
+@app.route("/version")
+def version():
+    return {"app": "jenkins-cicd-flask-app", "version": "1.0.0"}, 200
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
