@@ -1,8 +1,14 @@
+import logging
+from flask import request
+
+logging.basicConfig(level=logging.INFO)
+
 from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
 def home():
+    logging.info(f"Request received at / from client: {request.remote_addr}")
     return '''
     <div style="background:#000; color:#0f0; text-align:center; padding:60px 20px; font-family:'Courier New',monospace; min-height:100vh; margin:0;">
         <pre style="font-size:1.5rem; letter-spacing:2px;">
