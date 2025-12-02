@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: matrix-app }
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+      - name: matrix
+        image: sharmaviky/flask-jenkins:latest
+        ports: [{ containerPort: 5000 }]
+---
+apiVersion: v1
+kind: Service
+metadata: { name: matrix-service }
+spec:
+  type: LoadBalancer
+  ports: [{ port: 80, targetPort: 5000 }]
+  selector: { app: matrix }
