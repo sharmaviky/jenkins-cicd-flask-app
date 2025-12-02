@@ -11,6 +11,9 @@
 ## 🔗 Live Demo  
 👉 https://nonconciliatory-jessica-trachytic.ngrok-free.dev
 
+### OCI Deployment
+This application is deployed on Oracle Cloud VM with a permanent ngrok domain.
+
 **Deployed by:** Viky Sharma  
 **Batch:** 2025  
 **Role:** DevOps Engineer  
